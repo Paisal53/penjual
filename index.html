@@ -31,7 +31,7 @@
 
   <img src="loader.gif" style="width: 15em; display: block" id="loader">
 
-  <a href="from-data-penjual.html">tambah data pembeli</a>
+  <a href="from-data-penjual.html">tambah data penjual</a>
 
   <style>
     table {
@@ -63,16 +63,16 @@
   </style>
 
   <script type="module">
-    import { ambilDaftarPembeli, formatAngka, hapusPembeli } from './main.js';
+    import { ambilDaftarPenjual, formatAngka, hapusPenjual } from './main.js';
 
     $(document).ready(async function() {
-      let elemenDaftar = $("#daftar-pembeli > tbody");
-      let daftarPembeli = await ambilDaftarPembeli();
+      let elemenDaftar = $("#daftar-penjual > tbody");
+      let daftarPenjual = await ambilDaftarPenjual();
       let nomor = 1;
 
 
 
-      daftarPembeli.forEach((data) => {
+      daftarPenjual.forEach((data) => {
         elemenDaftar.append(
           '<tr>' +
           '<th>' + nomor + '</th>' +
