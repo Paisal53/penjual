@@ -34,16 +34,16 @@
   <a class="mt-1" href="index.html">Lihat Daftar penjual</a>
 
   <script type="module">
-    import { ambilPembeli, ubahPembeli } from './main.js';
+    import { ambil penjual, ubahpenjual } from './main.js';
 
     let tombolUbah = document.getElementById('tombol-ubah');
-    let elemenNamaPembeli = document.getElementById('input-nama');
+    let elemenNamapenjual = document.getElementById('input-nama');
     let elemenAlamat = document.getElementById('input-alamat');
     let elemenNoTlpn = document.getElementById('input-noTlpn');
     const queryString = window.location.search
     const parameterURL = new URLSearchParams(queryString);
     const docId = parameterURL.get('docId')
-    const pembeli = await ambilPembeli(docId);
+    const pembeli = await ambilPenjual(docId);
 
     elemenNamaPembeli.value = pembeli.nama;
     elemenAlamat.value = pembeli.alamat;
