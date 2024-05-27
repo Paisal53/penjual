@@ -69,7 +69,7 @@ export async function hapuspenjual(docId) {
 }
 
 export async function ubahpenjual(docId, nama, alamat, noTlpn) {
-  await updateDoc(doc(db, "pembeli", docId), {
+  await updateDoc(doc(db, "penjual", docId), {
     nama: nama,
     alamat: alamat,
     noTlpn: noTlpn
@@ -77,7 +77,7 @@ export async function ubahpenjual(docId, nama, alamat, noTlpn) {
 }
 
 export async function ambilPembeli(docId) {
-  const docRef = await doc(db, "pembeli", docId);
+  const docRef = await doc(db, "penjual", docId);
   const docSnap = await getDoc(docRef);
 
   return await docSnap.data();
