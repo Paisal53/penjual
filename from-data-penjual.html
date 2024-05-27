@@ -31,19 +31,19 @@
        <button type="submit" class="btn btn-primary" id="tombol-tambah">Simpan</button>
      </form>
    
-   <a href="index.html">Daftar Pembeli Ashelole</a>
+   <a href="index.html">Daftar penjual Ashelole</a>
    
    <script type="module">
-     import { tambahPembeli } from './main.js';
+     import { tambahPenjual } from './main.js';
      
      let tombolTambah = document.getElementById('tombol-tambah');
-     let elemenNamaPembeli = document.getElementById('input-nama');
+     let elemenNamaPenjual = document.getElementById('input-nama');
      let elemenAlamat = document.getElementById('input-alamat');
      let elemenNoTlpn = document.getElementById('input-noTlpn');
      
      tombolTambah.addEventListener('click', async function (e) {
        e.preventDefault();
-       await tambahPembeli(elemenNamaPembeli.value, elemenAlamat.value, elemenNoTlpn.value );
+       await tambahPembeli(elemenNamaPenjual.value, elemenAlamat.value, elemenNoTlpn.value );
        window.location.href = 'index.html'
      })
    </script>
