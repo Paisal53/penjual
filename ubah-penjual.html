@@ -45,9 +45,9 @@
     const docId = parameterURL.get('docId')
     const pembeli = await ambilPenjual(docId);
 
-    elemenNamaPembeli.value = pembeli.nama;
-    elemenAlamat.value = pembeli.alamat;
-    elemenNoTlpn.value = pembeli.noTlpn;
+    elemenNamapenjual.value = penjual.nama;
+    elemenAlamat.value = penjual.alamat;
+    elemenNoTlpn.value = penjual.noTlpn;
 
 
     tombolUbah.addEventListener('click', async function(el) {
