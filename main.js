@@ -53,7 +53,7 @@ export function formatAngka(x) {
 
 export async function tambahpenjual(nama, alamat, noTlpn) {
   try {
-    const dokRef = await addDoc(collection(db, 'pembeli'), {
+    const dokRef = await addDoc(collection(db, 'penjual'), {
       nama: nama,
       alamat: alamat,
       noTlpn: noTlpn
@@ -64,11 +64,11 @@ export async function tambahpenjual(nama, alamat, noTlpn) {
   }
 }
 
-export async function hapusPembeli(docId) {
-  await deleteDoc(doc(db, "pembeli", docId));
+export async function hapuspenjual(docId) {
+  await deleteDoc(doc(db, "penjual", docId));
 }
 
-export async function ubahPembeli(docId, nama, alamat, noTlpn) {
+export async function ubahpenjual(docId, nama, alamat, noTlpn) {
   await updateDoc(doc(db, "pembeli", docId), {
     nama: nama,
     alamat: alamat,
